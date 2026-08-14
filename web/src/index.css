@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Theme-aware semantic tokens — mirrors mobile's AppTheme.light/dark exactly
+ * (see mobile/lib/core/theme/app_theme.dart and theme_extensions.dart).
+ * Brand colors (primary/secondary/success/danger/warning) are NOT here —
+ * they're constant across themes and live directly in tailwind.config.js.
+ */
+:root {
+  --color-page: #F3F4F6;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
+  --color-border: #D1D5DB;
+  --color-primary-tint: #EBDEE4;
+  --color-on-primary-tint: #660033;
+  /* Darker than the dark-mode shade below — the vivid shade only clears
+     WCAG AA text contrast (4.5:1) against a dark card, not a white one. */
+  --color-success: #047857;
+  --color-warning: #C2410C;
+  --color-danger: #DC2626;
+}
+
+.dark {
+  --color-page: #111827;
+  --color-surface: #1F2937;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #9CA3AF;
+  --color-border: #374151;
+  --color-primary-tint: #472138;
+  --color-on-primary-tint: #F0B8CE;
+  --color-success: #10B981;
+  --color-warning: #F97316;
+  --color-danger: #F87171;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--color-page);
+  color: var(--color-text-primary);
+}
