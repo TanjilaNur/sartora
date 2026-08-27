@@ -1,0 +1,17 @@
+node_modules
+dist
+
+.env
+.env.local
+.env.*.local
+
+# Never commit a real Firebase service-account key.
+firebase-service-account*.json
+
+*.log
+npm-debug.log*
+
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
