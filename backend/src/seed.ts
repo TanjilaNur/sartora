@@ -60,17 +60,28 @@ async function seed() {
   console.log('✅ Categories created');
 
   // ─── Products ────────────────────────────────────────────────────────────
+  // One distinct photo per product (verified live on images.unsplash.com) so the
+  // catalog grid — which always renders images[0] — never shows the same photo
+  // for two different products. Secondary gallery images (images[1]) are free to
+  // reuse photos from this pool since they never appear as a catalog thumbnail.
   const UNSPLASH = {
     dress1:  'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400',
-    dress2:  'https://images.unsplash.com/photo-1566479179817-c0cdbf5ca98a?w=400',
+    dress2:  'https://images.unsplash.com/photo-1640262653856-126f61bf57ff?w=400',
     dress3:  'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=400',
+    dress4:  'https://images.unsplash.com/photo-1620736214052-51686075eccf?w=400',
+    dress5:  'https://images.unsplash.com/photo-1763539816710-eabebee521a6?w=400',
+    dress6:  'https://images.unsplash.com/photo-1611800065437-f033a1d04b6c?w=400',
     top1:    'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400',
     top2:    'https://images.unsplash.com/photo-1554568218-0f1715e72254?w=400',
+    top3:    'https://images.unsplash.com/photo-1600884350802-c6d0bf14dcc6?w=400',
+    top4:    'https://images.unsplash.com/photo-1778826971124-c5ee892e266e?w=400',
     bottom1: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=400',
-    bottom2: 'https://images.unsplash.com/photo-1594938298603-c8148c4b4de0?w=400',
+    bottom2: 'https://images.unsplash.com/photo-1743356914615-66062f1850e6?w=400',
+    bottom3: 'https://images.unsplash.com/photo-1580651214613-f4692d6d138f?w=400',
     coat1:   'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400',
     coat2:   'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400',
-    bag1:    'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400',
+    bag1:    'https://images.unsplash.com/photo-1624687943971-e86af76d57de?w=400',
+    necklace:'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400',
     shoes1:  'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400',
     shoes2:  'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400',
   };
@@ -80,27 +91,27 @@ async function seed() {
     { name: 'Floral Wrap Dress', description: 'Light floral wrap dress perfect for summer occasions. Soft chiffon fabric with a flattering V-neckline.', category: dresses._id, price: 89.99, stock: 45, images: [UNSPLASH.dress1, UNSPLASH.dress3], variants: [{ size: 'S', stock: 15 }, { size: 'M', stock: 20 }, { size: 'L', stock: 10 }], averageRating: 4.5, reviewCount: 0 },
     { name: 'Little Black Dress', description: 'Classic little black dress, a wardrobe staple. Knee-length with subtle side slit.', category: dresses._id, price: 119.99, stock: 30, images: [UNSPLASH.dress2], variants: [{ size: 'S', color: '#000000', stock: 10 }, { size: 'M', color: '#000000', stock: 12 }, { size: 'L', color: '#000000', stock: 8 }], averageRating: 4.8, reviewCount: 0 },
     { name: 'Maxi Boho Dress', description: 'Effortless bohemian maxi dress with tiered ruffles and vibrant print.', category: dresses._id, price: 74.99, stock: 20, images: [UNSPLASH.dress3], averageRating: 4.2, reviewCount: 0 },
-    { name: 'Midi Shirt Dress', description: 'Smart-casual midi shirt dress in crisp cotton. Ideal for both office and weekends.', category: dresses._id, price: 99.99, stock: 15, images: [UNSPLASH.dress1], averageRating: 4.6, reviewCount: 0 },
+    { name: 'Midi Shirt Dress', description: 'Smart-casual midi shirt dress in crisp cotton. Ideal for both office and weekends.', category: dresses._id, price: 99.99, stock: 15, images: [UNSPLASH.dress4], averageRating: 4.6, reviewCount: 0 },
     // Deliberately a PARTIAL size x color matrix (Black: S/M only, Red: M/L
     // only) — exercises the mobile app's cross-filtering between the
     // independent Color and Size rows, not just a trivial full matrix.
-    { name: 'Evening Gown', description: 'Elegant floor-length evening gown with sequin embellishments.', category: dresses._id, price: 249.99, stock: 8, images: [UNSPLASH.dress2, UNSPLASH.dress1], variants: [{ size: 'S', color: '#000000', stock: 2 }, { size: 'M', color: '#000000', stock: 2 }, { size: 'M', color: '#7A1F3D', stock: 2 }, { size: 'L', color: '#7A1F3D', stock: 2, priceOverride: 269.99 }], averageRating: 4.9, reviewCount: 0 },
-    { name: 'Casual Sundress', description: 'Relaxed cotton sundress with adjustable straps and pockets.', category: dresses._id, price: 49.99, stock: 60, images: [UNSPLASH.dress3], averageRating: 4.3, reviewCount: 0 },
+    { name: 'Evening Gown', description: 'Elegant floor-length evening gown with sequin embellishments.', category: dresses._id, price: 249.99, stock: 8, images: [UNSPLASH.dress5, UNSPLASH.dress2], variants: [{ size: 'S', color: '#000000', stock: 2 }, { size: 'M', color: '#000000', stock: 2 }, { size: 'M', color: '#7A1F3D', stock: 2 }, { size: 'L', color: '#7A1F3D', stock: 2, priceOverride: 269.99 }], averageRating: 4.9, reviewCount: 0 },
+    { name: 'Casual Sundress', description: 'Relaxed cotton sundress with adjustable straps and pockets.', category: dresses._id, price: 49.99, stock: 60, images: [UNSPLASH.dress6], averageRating: 4.3, reviewCount: 0 },
     // Tops (4)
     { name: 'Silk Blouse', description: 'Luxurious silk blouse with pearl button detailing. Available in classic neutrals.', category: tops._id, price: 65.99, stock: 25, images: [UNSPLASH.top1], averageRating: 4.4, reviewCount: 0 },
     { name: 'Striped Linen Tee', description: 'Breathable linen tee in nautical stripes. Perfect casual essential.', category: tops._id, price: 34.99, stock: 80, images: [UNSPLASH.top2], averageRating: 4.1, reviewCount: 0 },
-    { name: 'Floral Crop Top', description: 'Trendy crop top with floral print and flutter sleeves.', category: tops._id, price: 29.99, stock: 50, images: [UNSPLASH.top1], averageRating: 4.0, reviewCount: 0 },
-    { name: 'Classic White Shirt', description: 'Timeless white button-down shirt in premium cotton. Versatile wardrobe essential.', category: tops._id, price: 55.99, stock: 35, images: [UNSPLASH.top2], variants: [{ size: 'S', stock: 10 }, { size: 'M', stock: 15 }, { size: 'L', stock: 10 }], averageRating: 4.7, reviewCount: 0 },
+    { name: 'Floral Crop Top', description: 'Trendy crop top with floral print and flutter sleeves.', category: tops._id, price: 29.99, stock: 50, images: [UNSPLASH.top3], averageRating: 4.0, reviewCount: 0 },
+    { name: 'Classic White Shirt', description: 'Timeless white button-down shirt in premium cotton. Versatile wardrobe essential.', category: tops._id, price: 55.99, stock: 35, images: [UNSPLASH.top4], variants: [{ size: 'S', stock: 10 }, { size: 'M', stock: 15 }, { size: 'L', stock: 10 }], averageRating: 4.7, reviewCount: 0 },
     // Bottoms (3)
     { name: 'High-Waist Trousers', description: 'Tailored high-waist trousers in crepe fabric. Professional and polished.', category: bottoms._id, price: 79.99, stock: 22, images: [UNSPLASH.bottom1], averageRating: 4.5, reviewCount: 0 },
     { name: 'Denim Midi Skirt', description: 'Vintage-inspired denim midi skirt with button front.', category: bottoms._id, price: 59.99, stock: 40, images: [UNSPLASH.bottom2], averageRating: 4.3, reviewCount: 0 },
-    { name: 'Wide-Leg Linen Pants', description: 'Relaxed wide-leg linen pants, perfect for warm weather.', category: bottoms._id, price: 69.99, stock: 18, images: [UNSPLASH.bottom1], averageRating: 4.2, reviewCount: 0 },
+    { name: 'Wide-Leg Linen Pants', description: 'Relaxed wide-leg linen pants, perfect for warm weather.', category: bottoms._id, price: 69.99, stock: 18, images: [UNSPLASH.bottom3], averageRating: 4.2, reviewCount: 0 },
     // Outerwear (2)
     { name: 'Trench Coat', description: 'Classic double-breasted trench coat in camel. A timeless investment piece.', category: outerwear._id, price: 189.99, stock: 12, images: [UNSPLASH.coat1, UNSPLASH.coat2], averageRating: 4.8, reviewCount: 0 },
     { name: 'Oversized Blazer', description: 'On-trend oversized blazer in neutral check. Works as a dress or layering piece.', category: outerwear._id, price: 149.99, stock: 10, images: [UNSPLASH.coat2], averageRating: 4.6, reviewCount: 0 },
     // Accessories (2)
     { name: 'Leather Tote Bag', description: 'Spacious genuine leather tote with interior zip pocket. Work-to-weekend bag.', category: accessories._id, price: 139.99, stock: 20, images: [UNSPLASH.bag1], averageRating: 4.7, reviewCount: 0 },
-    { name: 'Gold Pendant Necklace', description: 'Minimalist gold-plated pendant necklace on delicate chain.', category: accessories._id, price: 39.99, stock: 100, images: [UNSPLASH.bag1], averageRating: 4.5, reviewCount: 0 },
+    { name: 'Gold Pendant Necklace', description: 'Minimalist gold-plated pendant necklace on delicate chain.', category: accessories._id, price: 39.99, stock: 100, images: [UNSPLASH.necklace], averageRating: 4.5, reviewCount: 0 },
     // Footwear (2)
     { name: 'Block Heel Sandals', description: 'Comfortable block-heel sandals with ankle strap. Effortlessly stylish.', category: footwear._id, price: 89.99, stock: 28, images: [UNSPLASH.shoes1], variants: [{ size: '7', stock: 10 }, { size: '8', stock: 12 }, { size: '9', stock: 6 }], averageRating: 4.4, reviewCount: 0 },
     { name: 'White Sneakers', description: 'Clean all-white leather sneakers. The ultimate casual footwear.', category: footwear._id, price: 75.99, stock: 55, images: [UNSPLASH.shoes2], averageRating: 4.6, reviewCount: 0 },
