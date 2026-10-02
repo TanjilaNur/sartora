@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/screenshots/web/web-home.png" width="720" alt="Sartora storefront" />
+<img src="docs/screenshots/web/web-hero.png" width="720" alt="Sartora storefront" />
 
 # Sartora
 
@@ -54,7 +54,7 @@ The customer-facing shopping site: browse by category, search, view product deta
 
 <table>
 <tr>
-<td width="33%"><img src="docs/screenshots/web/web-home.png" alt="Web home / catalog" /><br/><sub align="center">Home & catalog</sub></td>
+<td width="33%"><img src="docs/screenshots/web/web-catalog.png" alt="Web catalog with category filter" /><br/><sub align="center">Catalog & filters</sub></td>
 <td width="33%"><img src="docs/screenshots/web/web-product-detail.png" alt="Web product detail" /><br/><sub>Product detail</sub></td>
 <td width="33%"><img src="docs/screenshots/web/web-cart.png" alt="Web cart" /><br/><sub>Cart (guest checkout)</sub></td>
 </tr>
