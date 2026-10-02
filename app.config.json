@@ -1,0 +1,346 @@
+{
+  "version": "2.0.0",
+  "projectId": "65d36cc4-ca66-48ec-90bf-ef0baec720a4",
+  "fields": [
+    {
+      "key": "api_url",
+      "label": "API Base URL",
+      "group": "API",
+      "type": "text",
+      "value": "http://localhost:4000",
+      "description": "Backend API endpoint",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "envKey": "VITE_API_URL",
+          "file": "admin-panel/.env"
+        },
+        {
+          "component": "backend",
+          "envKey": "API_URL",
+          "file": "backend/.env"
+        }
+      ]
+    },
+    {
+      "key": "app_name",
+      "label": "Application Name",
+      "group": "Branding",
+      "type": "text",
+      "value": "Sartora",
+      "description": "Name of the application",
+      "targets": []
+    },
+    {
+      "key": "color_primary",
+      "label": "Primary Color",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#660033",
+      "description": "Brand primary color — buttons, links, highlights",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/constants/brandColors.ts",
+          "pattern": "brandPrimary\\s*=\\s*'#[0-9A-Fa-f]{6}'"
+        },
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "colorPrimary\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?primary\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_primary_light",
+      "label": "Primary Light",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#EDE9FE",
+      "description": "Light background for primary elements",
+      "targets": [
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?primaryLight\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_secondary",
+      "label": "Secondary Color",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#E60073",
+      "description": "Secondary accent color — badges, tags",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "colorSecondary\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?secondary\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_success",
+      "label": "Success Color",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#10B981",
+      "description": "Success states",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "colorSuccess\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?success\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_danger",
+      "label": "Danger/Error Color",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#EF4444",
+      "description": "Error and destructive states",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "colorError\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?danger\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_warning",
+      "label": "Warning Color",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#F97316",
+      "description": "Warning states",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "colorWarning\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?warning\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_neutral_900",
+      "label": "Dark Neutral (Text)",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#111827",
+      "description": "Headings and primary text",
+      "targets": [
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?neutral900\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_neutral_600",
+      "label": "Medium Neutral (Body Text)",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#4B5563",
+      "description": "Body text color",
+      "targets": [
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?neutral600\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_neutral_300",
+      "label": "Light Neutral (Borders)",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#D1D5DB",
+      "description": "Borders and dividers",
+      "targets": [
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?neutral300\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "color_neutral_100",
+      "label": "Very Light Neutral (Background)",
+      "group": "Color Palette",
+      "type": "color",
+      "value": "#F3F4F6",
+      "description": "Page background",
+      "targets": [
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/constants/app_colors.dart",
+          "pattern": "(?:static\\s+const\\s+)?neutral100\\s*=\\s*Color\\(0xFF[0-9A-Fa-f]{6}\\)"
+        }
+      ]
+    },
+    {
+      "key": "font_family",
+      "label": "Font Family",
+      "group": "Typography",
+      "type": "text",
+      "value": "'Inter', 'Segoe UI', system-ui, sans-serif",
+      "description": "Primary font family for all text",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "fontFamily\\s*:\\s*[\"'].*[\"']"
+        },
+        {
+          "component": "mobile",
+          "file": "mobile/lib/core/theme/app_theme.dart",
+          "pattern": "fontFamily\\s*:\\s*[\"'].*[\"']"
+        }
+      ]
+    },
+    {
+      "key": "heading_1_size",
+      "label": "H1 Font Size (px)",
+      "group": "Typography",
+      "type": "number",
+      "value": 28,
+      "description": "Page title font size",
+      "targets": []
+    },
+    {
+      "key": "heading_1_weight",
+      "label": "H1 Font Weight",
+      "group": "Typography",
+      "type": "text",
+      "value": "700",
+      "description": "Page title font weight",
+      "targets": []
+    },
+    {
+      "key": "heading_2_size",
+      "label": "H2 Font Size (px)",
+      "group": "Typography",
+      "type": "number",
+      "value": 22,
+      "description": "Section heading font size",
+      "targets": []
+    },
+    {
+      "key": "heading_2_weight",
+      "label": "H2 Font Weight",
+      "group": "Typography",
+      "type": "text",
+      "value": "600",
+      "description": "Section heading font weight",
+      "targets": []
+    },
+    {
+      "key": "body_size",
+      "label": "Body Font Size (px)",
+      "group": "Typography",
+      "type": "number",
+      "value": 14,
+      "description": "Default body text size",
+      "targets": []
+    },
+    {
+      "key": "body_weight",
+      "label": "Body Font Weight",
+      "group": "Typography",
+      "type": "text",
+      "value": "400",
+      "description": "Default body text weight",
+      "targets": []
+    },
+    {
+      "key": "caption_size",
+      "label": "Caption Font Size (px)",
+      "group": "Typography",
+      "type": "number",
+      "value": 12,
+      "description": "Helper text and labels size",
+      "targets": []
+    },
+    {
+      "key": "caption_weight",
+      "label": "Caption Font Weight",
+      "group": "Typography",
+      "type": "text",
+      "value": "400",
+      "description": "Helper text and labels weight",
+      "targets": []
+    },
+    {
+      "key": "spacing_unit",
+      "label": "Spacing Base Unit (px)",
+      "group": "Spacing",
+      "type": "number",
+      "value": 8,
+      "description": "Base unit for spacing calculations",
+      "targets": []
+    },
+    {
+      "key": "border_radius",
+      "label": "Border Radius (px)",
+      "group": "Spacing",
+      "type": "number",
+      "value": 8,
+      "description": "Default border radius",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "file": "admin-panel/src/App.tsx",
+          "pattern": "borderRadius\\s*:\\s*\\d+"
+        }
+      ]
+    },
+    {
+      "key": "enable_analytics",
+      "label": "Enable Analytics",
+      "group": "Features",
+      "type": "toggle",
+      "value": "false",
+      "description": "Enable usage analytics",
+      "targets": [
+        {
+          "component": "admin-panel",
+          "envKey": "VITE_ENABLE_ANALYTICS",
+          "file": "admin-panel/.env"
+        }
+      ]
+    }
+  ]
+}
