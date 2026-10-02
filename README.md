@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/demo.gif" width="720" alt="Sartora demo — browsing the catalog, viewing a product, and adding it to cart" />
+<img src="docs/hero.png" width="900" alt="Sartora — web storefront, mobile app, and admin panel" />
 
 # Sartora
 
@@ -50,8 +50,18 @@ Architecture: REST API (MVC-style, resource-per-folder) consumed by three indepe
 
 ### 🛍️ Web Storefront (`/web`)
 
-The customer-facing shopping site: browse by category, search, view product detail, manage a cart (as a guest or signed in), check out, track orders, and earn/redeem rewards.
+<img src="docs/demo-web.gif" width="760" alt="Web storefront demo — search, filter, product detail, review, cart, checkout, rewards, dark mode" />
 
+- **Discover** — full-text search plus category filters (Dresses, Tops, Bottoms, Outerwear, Footwear, Accessories)
+- **Decide** — variant-aware product pages (size/color), live stock status, star ratings, and a wishlist
+- **Trust** — a verified-purchase review system, editable after posting
+- **Buy** — guest or signed-in cart with cross-device merge on login, promo codes, and three checkout paths (Stripe, cash on delivery, bank transfer)
+- **Track** — order history with per-order status and full item breakdown
+- **Return** — loyalty points ledger, unlockable badges, and a live shopper leaderboard
+- **Access** — JWT auth with email/password, phone/OTP, Google sign-in, and password recovery
+- **Polish** — dark mode, FAQ, and a contact/support center
+
+<!--
 <table>
 <tr>
 <td width="33%"><img src="docs/screenshots/web/web-catalog.png" alt="Web catalog with category filter" /><br/><sub align="center">Catalog & filters</sub></td>
@@ -64,11 +74,21 @@ The customer-facing shopping site: browse by category, search, view product deta
 <td width="33%"><img src="docs/screenshots/web/web-rewards.png" alt="Web rewards" /><br/><sub>Rewards & points</sub></td>
 </tr>
 </table>
+-->
 
 ### 📱 Mobile App (`/mobile`)
 
-A full-featured Flutter app mirroring the web storefront: guest and signed-in shopping, checkout with multiple payment methods, order confirmation, a points/badges/leaderboard system, dark mode, reviews, and a help center.
+<img src="docs/demo-mobile.gif" width="320" alt="Mobile app demo — catalog, product detail, checkout, rewards, reviews, dark mode" />
 
+- **One codebase, full parity** — every web storefront capability, rebuilt natively in Flutter
+- **Guest-first** — browse and cart as a guest, with a seamless hand-off to your account on sign-in
+- **Secure access** — biometric-ready login, phone/OTP sign-in
+- **Shop with confidence** — category filters, variant selection, verified reviews
+- **Checkout your way** — card, cash on delivery, or bank transfer, with instant order confirmation
+- **Stay engaged** — points, badges, and a live leaderboard; push notifications via Firebase
+- **Make it yours** — dark mode and an in-app FAQ/contact center
+
+<!--
 <table>
 <tr>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-login.png" alt="Mobile login" /><br/><sub>Sign in</sub></td>
@@ -95,11 +115,22 @@ A full-featured Flutter app mirroring the web storefront: guest and signed-in sh
 <td width="25%"><img src="docs/screenshots/mobile/mobile-dark-mode.png" alt="Mobile dark mode" /><br/><sub>Dark mode</sub></td>
 </tr>
 </table>
+-->
 
 ### 🛠️ Admin Panel (`/admin-panel`)
 
-The operations dashboard for running the store: live sales/order metrics, full CRUD over products and categories, order and refund processing, promotions, and customer support content.
+<img src="docs/demo-admin.gif" width="760" alt="Admin panel demo — dashboard, products, orders, refunds, promotions, leaderboard" />
 
+- **See the business at a glance** — live revenue trend, order-status breakdown, and low-stock alerts
+- **Run the catalog** — full product & category CRUD with multi-image and variant management
+- **Fulfil orders** — status updates, carrier/tracking info, and generated invoices
+- **Handle money matters** — payment reconciliation and a refund approve/reject workflow
+- **Keep quality high** — review moderation and promo-code management
+- **Know your customers** — a directory with lifetime spend and order history
+- **Drive loyalty** — administer points, badges, and the shopper leaderboard
+- **Support shoppers** — guest-session visibility plus FAQ/contact content management
+
+<!--
 <table>
 <tr>
 <td width="33%"><img src="docs/screenshots/admin/admin-login.png" alt="Admin login" /><br/><sub>Sign in</sub></td>
@@ -122,6 +153,7 @@ The operations dashboard for running the store: live sales/order metrics, full C
 <td width="33%"></td>
 </tr>
 </table>
+-->
 
 ### ⚙️ Backend API (`/backend`)
 
@@ -188,6 +220,6 @@ flutter run              # connects to http://localhost:4000
 ├── admin-panel/    # React + Ant Design admin dashboard
 ├── web/            # React + Tailwind customer storefront
 ├── mobile/         # Flutter shopping app
-├── docs/           # Screenshots and supporting docs
+├── docs/           # Demo GIFs, hero image, and supporting docs
 └── app.config.json # Branding/config used by the App Builder
 ```
