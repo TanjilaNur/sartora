@@ -86,19 +86,13 @@ A full-featured Flutter app mirroring the web storefront: guest and signed-in sh
 <td width="25%"><img src="docs/screenshots/mobile/mobile-order-confirmed.png" alt="Mobile order confirmed" /><br/><sub>Order confirmed</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-rewards.png" alt="Mobile rewards" /><br/><sub>Rewards & leaderboard</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-write-review.png" alt="Mobile write a review" /><br/><sub>Write a review</sub></td>
-<td width="25%"><img src="docs/screenshots/mobile/mobile-settings.png" alt="Mobile settings" /><br/><sub>Settings</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-help-support.png" alt="Mobile help and support" /><br/><sub>Help & support</sub></td>
 </tr>
 <tr>
-<td width="25%"><img src="docs/screenshots/mobile/mobile-help-support.png" alt="Mobile help and support" /><br/><sub>Help & support</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-faq.png" alt="Mobile FAQ" /><br/><sub>FAQ</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-contact-us.png" alt="Mobile contact us" /><br/><sub>Contact us</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-guest-catalog.png" alt="Mobile guest catalog" /><br/><sub>Guest mode</sub></td>
-</tr>
-<tr>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-dark-mode.png" alt="Mobile dark mode" /><br/><sub>Dark mode</sub></td>
-<td width="25%"></td>
-<td width="25%"></td>
-<td width="25%"></td>
 </tr>
 </table>
 
