@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/screenshots/web/web-hero.png" width="720" alt="Sartora storefront" />
+<img src="docs/demo.gif" width="720" alt="Sartora demo — browsing the catalog, viewing a product, and adding it to cart" />
 
 # Sartora
 
