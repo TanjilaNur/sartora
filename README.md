@@ -67,18 +67,38 @@ The customer-facing shopping site: browse by category, search, view product deta
 
 ### 📱 Mobile App (`/mobile`)
 
-A Flutter app with the same shopping flow as the web storefront, including a guest mode, a points/badges/leaderboard screen, and biometric-ready login.
+A full-featured Flutter app mirroring the web storefront: guest and signed-in shopping, checkout with multiple payment methods, order confirmation, a points/badges/leaderboard system, dark mode, reviews, and a help center.
 
 <table>
 <tr>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-login.png" alt="Mobile login" /><br/><sub>Sign in</sub></td>
-<td width="25%"><img src="docs/screenshots/mobile/mobile-guest-home.png" alt="Mobile guest catalog" /><br/><sub>Guest catalog</sub></td>
-<td width="25%"><img src="docs/screenshots/mobile/mobile-product-detail.png" alt="Mobile product detail" /><br/><sub>Product detail</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-home.png" alt="Mobile home" /><br/><sub>Signed-in home</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-catalog.png" alt="Mobile catalog" /><br/><sub>Catalog</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-catalog-accessories.png" alt="Mobile catalog filtered by category" /><br/><sub>Category filter</sub></td>
 </tr>
 <tr>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-product-detail.png" alt="Mobile product detail" /><br/><sub>Product detail</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-cart.png" alt="Mobile cart" /><br/><sub>Cart</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-checkout.png" alt="Mobile checkout" /><br/><sub>Checkout</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-checkout-payment.png" alt="Mobile checkout payment methods" /><br/><sub>Payment methods</sub></td>
+</tr>
+<tr>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-order-confirmed.png" alt="Mobile order confirmed" /><br/><sub>Order confirmed</sub></td>
 <td width="25%"><img src="docs/screenshots/mobile/mobile-rewards.png" alt="Mobile rewards" /><br/><sub>Rewards & leaderboard</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-write-review.png" alt="Mobile write a review" /><br/><sub>Write a review</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-settings.png" alt="Mobile settings" /><br/><sub>Settings</sub></td>
+</tr>
+<tr>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-help-support.png" alt="Mobile help and support" /><br/><sub>Help & support</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-faq.png" alt="Mobile FAQ" /><br/><sub>FAQ</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-contact-us.png" alt="Mobile contact us" /><br/><sub>Contact us</sub></td>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-guest-catalog.png" alt="Mobile guest catalog" /><br/><sub>Guest mode</sub></td>
+</tr>
+<tr>
+<td width="25%"><img src="docs/screenshots/mobile/mobile-dark-mode.png" alt="Mobile dark mode" /><br/><sub>Dark mode</sub></td>
+<td width="25%"></td>
+<td width="25%"></td>
+<td width="25%"></td>
 </tr>
 </table>
 
