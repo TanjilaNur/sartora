@@ -1,0 +1,9 @@
+# Root-level ignores. Each module (backend/, admin-panel/, web/, mobile/) also
+# has its own .gitignore covering node_modules, build/dist output, and .env files.
+
+.DS_Store
+**/.DS_Store
+
+# AI pipeline metadata — not part of the application itself
+.pipeline/
+.claude/
